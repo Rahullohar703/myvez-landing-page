@@ -164,7 +164,7 @@ header .logo a img {
 
 /* hero section */
 main {
-  margin-top: 4.375rem;
+  margin-top: 8.0rem;
 }
 
 .hero {
@@ -177,23 +177,25 @@ main {
 .hero_left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;  /* centers items horizontally */
   gap: 35px;
 }
 
+
 .hero_left h3 {
-  font-size: 4vmax;
-  max-width: 600px;
+  font-size: 30px;
+  max-width: 1000px;
   text-wrap: pretty;
 }
 
 .hero_left p,
 .hero_left button {
-  font-size: 20px;
+  font-size: 25px;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .hero_left p {
-  max-width: 500px;
+  max-width: 800px;
   text-wrap: pretty;
 }
 
@@ -201,7 +203,7 @@ main {
   background-color: var(--black);
   color: #fff;
   border: 1px solid #fff;
-  border-radius: 10px;
+  border-radius: 15px;
   z-index: 100;
 }
 
@@ -494,7 +496,7 @@ footer {
 .work_process_bottom {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 30px;
   width: 100%;
@@ -511,6 +513,9 @@ footer {
   border: 1px solid var(--black);
   border-radius: 45px;
   box-shadow: 0 5px 0 0 var(--black);
+  width: 100%;
+  min-height: 200px; /* Keeps all steps the same height */
+  box-sizing: border-box;
 }
 
 .work_process_bottom_box:hover {
@@ -595,6 +600,33 @@ footer {
   opacity: 1;
   margin: 0;
 }
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .work_process_bottom {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .work_process_bottom_box {
+    width: 100%;
+    min-height: 180px;
+    padding: 2rem;
+  }
+
+  .work_process_bottom_box .box-top h3 {
+    font-size: 24px;
+  }
+
+  .work_process_bottom_box .box-top h3::before {
+    font-size: 36px;
+  }
+
+  .work_process_bottom_box .box-bottom.active {
+    padding: 1.5rem 0 0 0;
+  }
+}
+
 
 /* team members */
 .team_members_bottom {
@@ -1004,7 +1036,7 @@ textarea {
 
 /* footer */
 footer {
-  background-color: var(--black);
+  background-color: black;
   padding: 3rem;
   border-radius: 45px;
 }
@@ -2212,3 +2244,24 @@ footer .footer_bottom {
     top: 29.5rem !important;
   }
 }
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card_left h4 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #222;
+  margin: 0.2rem 0;
+}
+

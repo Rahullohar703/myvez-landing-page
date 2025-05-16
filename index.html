@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/IMAGES/Positivus_Favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/CSS/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <title>Positivus - A Cutting-Edge Digital Marketing Agency</title>
+    <title>Myvez - Get 8–10 high-value clients in the next 60 days — our AI-powered system attracts, filters, and delivers serious homeowners looking for interior or architecture help</title>
   </head>
   <body>
     <header id="header">
@@ -19,21 +19,15 @@
       <nav class="nav_list_container">
         <ul id="list">
           <li class="list_item">
-            <a href="#work-process">about us</a>
+            <a href="#work-process">Work Process</a>
           </li>
           <li class="list_item">
             <a href="#services">services</a>
           </li>
           <li class="list_item">
-            <a href="#case-studies">use cases</a>
+            <a href="#testimonials">Testimonials</a>
           </li>
-          <li class="list_item">
-            <a href="#contact-us">pricing</a>
-          </li>
-          <li class="list_item">
-            <a href="#testimonials">blog</a>
-          </li>
-          <li class="list_btn">Request a quote</li>
+          <li class="list_btn">Book a Call</li>
         </ul>
         <div class="hamburger_menu" id="hamburger_menu">
           <div class="bar"></div>
@@ -44,160 +38,468 @@
     </header>
 
     <main>
-      <section class="hero">
-        <section class="hero_left">
-          <h3>Navigating the digital landscape for success</h3>
+<section class="custom-hero-section">
+  <h3 id="typed-container"></h3>
+  <p class="custom-subtext">Use AI Before Your Competitors Do!</p>
+  <button class="custom-hero-button">Book a Call</button>
+</section>
 
-          <p>
-            Our digital marketing agency helps businesses grow and succeed online through a range of services including
-            SEO, PPC, social media marketing, and content creation.
+<style>
+  .custom-hero-section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers content horizontally */
+    text-align: center;
+  }
+  h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #222;
+    min-height: 4.5rem; /* keeps space during typing */
+  }
+  .custom-subtext {
+    font-weight: 700;
+    color: #2196F3;
+    margin: 1rem 0 2rem 0;
+  }
+  .custom-hero-button {
+    background-color: #000;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+  }
+  .custom-hero-button:hover {
+    background-color: #ffffff;
+    color: #000;
+    border: 3px solid #000;
+    border-radius: 25px;
+  }
+  .highlight-blue {
+    color: #2196F3;
+    font-weight: bold;
+  }
+  .highlight-green {
+    color: #4caf50;
+    font-weight: bold;
+  }
+  .highlight-orange {
+    color: #ff9800;
+    font-weight: bold;
+  }
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 1.5rem;
+    }
+    .custom-hero-button {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  /* blinking cursor */
+  .cursor {
+    display: inline-block;
+    width: 1ch;
+    background-color: transparent;
+    animation: blink 1s steps(2, start) infinite;
+  }
+  @keyframes blink {
+    0%, 100% { background-color: transparent; }
+    50% { background-color: black; }
+  }
+</style>
+
+<script>
+  const parts = [
+    { text: "Get ", className: "" },
+    { text: "8–10 high-value clients", className: "highlight-blue" },
+    { text: " in the next ", className: "" },
+    { text: "60 days", className: "highlight-orange" },
+    { text: ", our ", className: "" },
+    { text: "AI-powered system", className: "highlight-green" },
+    { text: " attracts", className: "highlight-green" },
+    { text: ", ", className: "" },
+    { text: "filters", className: "highlight-orange" },
+    { text: ", and ", className: "" },
+    { text: "delivers", className: "highlight-blue" },
+    { text: " serious homeowners", className: "highlight-orange" },
+    { text: " looking for ", className: "" },
+    { text: "interior", className: "highlight-blue" },
+    { text: " or ", className: "" },
+    { text: "architecture help.", className: "highlight-blue" },
+  ];
+
+  const container = document.getElementById("typed-container");
+  let partIndex = 0;
+  let charIndex = 0;
+  let currentSpan;
+
+  function type() {
+    if (partIndex >= parts.length) {
+      if (!container.querySelector(".cursor")) {
+        const cursorSpan = document.createElement("span");
+        cursorSpan.classList.add("cursor");
+        cursorSpan.textContent = " ";
+        container.appendChild(cursorSpan);
+      }
+      // Keep cursor blinking forever without pause
+      setTimeout(type, 500);
+      return;
+    }
+
+    if (!currentSpan) {
+      currentSpan = document.createElement("span");
+      if (parts[partIndex].className) currentSpan.className = parts[partIndex].className;
+      container.appendChild(currentSpan);
+    }
+
+    const fullText = parts[partIndex].text;
+    currentSpan.textContent += fullText.charAt(charIndex);
+    charIndex++;
+
+    if (charIndex === fullText.length) {
+      partIndex++;
+      charIndex = 0;
+      currentSpan = null;
+    }
+
+    setTimeout(type, 40); // typing speed
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    type();
+  });
+</script>
+
+
+
+<div class="stats-container">
+  <div class="stat-box">
+    <div class="stat-number" data-target="2">0</div>
+    <div class="stat-label">Years of Experience</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-number" data-target="1000000">0</div>
+    <div class="stat-label">Ad Spends</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-number" data-target="100">0</div>
+    <div class="stat-label">Happy Clients</div>
+  </div>
+  <div class="stat-box">
+    <div class="stat-number" data-target="25">0</div>
+    <div class="stat-label">5 Star Reviews</div>
+  </div>
+</div>
+
+<style>
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background: #f9f9f9;
+    padding: 3rem 1rem;
+    margin-top: 35px;
+    border-radius: 1rem;
+  }
+
+  .stat-box {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    min-width: 140px;
+    transition: transform 0.3s ease;
+  }
+
+  .stat-box:hover {
+    transform: translateY(-5px);
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4caf50;
+  }
+
+  .stat-label {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+  }
+</style>
+
+<script>
+  const counters = document.querySelectorAll('.stat-number');
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const speed = 200; // lower is faster
+      const increment = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 15);
+      } else {
+        counter.innerText = target >= 1000000 ? '1M+' : target + '+';
+      }
+    };
+
+    updateCount();
+  });
+</script>
+
+<section class="why-us-section">
+  <h2 class="section-title">Why Businesses Trust Us</h2>
+
+  <!-- Top 3 Feature Cards -->
+  <div class="features-grid">
+    <div class="feature-box">
+      <h3>✅ Proven Track Record</h3>
+      <p>We’ve built a reputation as a trusted and reliable partner in achieving business success.</p>
+    </div>
+    <div class="feature-box">
+      <h3>🎯 Tailored Solutions</h3>
+      <p>We offer personalized solutions tailored to your specific goals, audience, and industry.</p>
+    </div>
+    <div class="feature-box">
+      <h3>🤝 Client-Centric Focus</h3>
+      <p>Your success is our priority. We prioritize understanding your business goals.</p>
+    </div>
+  </div>
+
+  <!-- Bottom 4 Pill Buttons -->
+  <div class="pill-buttons">
+    <span class="pill">🚀 Continuous Innovation</span>
+    <span class="pill">🛠️ Dedicated Support</span>
+    <span class="pill">🌟 Positive Client Experiences</span>
+    <span class="pill">🏆 Commitment to Excellence</span>
+  </div>
+</section>
+
+<style>
+  .why-us-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+  }
+
+  .feature-box {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+    text-align: left;
+  }
+
+  .feature-box:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #4caf50;
+  }
+
+  .feature-box p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .pill-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .pill {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+  }
+
+  .pill:hover {
+    background-color: #c8e6c9;
+  }
+</style>
+
+      <section class="testimonials" id="testimonials">
+  <div class="testimonials_top">
+    <h3>Testimonials</h3>
+    <p>
+      Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services
+    </p>
+  </div>
+
+  <div class="testimonials_bottom">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide swiper_card">
+          <p class="text">
+            We partnered with this team to revamp our entire ad strategy. In just two months, we saw a 4x ROI and started receiving leads that were actually ready to buy. Can’t recommend them enough!
           </p>
-
-          <button class="hero_button">Book a consultation</button>
-        </section>
-
-        <section class="hero_right">
-          <img src="/IMAGES/Illustration.svg" alt="hero illustration" />
-        </section>
-      </section>
-
-      <section class="client_row_container">
-        <div class="client_row">
-          <img src="/IMAGES/amazon_logo.webp" alt="amazon logo" />
-          <img src="/IMAGES/dribble_logo.webp" alt="dribble logo" />
-          <img src="/IMAGES/hubspot_logo.webp" alt="hubspot logo" />
-          <img src="/IMAGES/notion_logo.webp" alt="notion logo" />
-          <img src="/IMAGES/netflix_logo.webp" alt="netflix logo" />
-          <img src="/IMAGES/zoom_logo.webp" alt="zoom logo" />
+          <div class="author">
+            <h4>Ravi Mehta</h4>
+            <p>Founder at BuildOn Interiors</p>
+          </div>
         </div>
-      </section>
 
-      <section class="services" id="services">
-        <section class="services_top">
-          <h3>Services</h3>
-
-          <p>
-            At our digital marketing agency, we offer a range of services to help businesses grow and succeed online.
-            These services include:
+        <div class="swiper-slide swiper_card">
+          <p class="text">
+            These guys completely changed how we approach digital. Their automation setup saved us hours every week, and the results speak for themselves — more calls, more conversions, less headache.
           </p>
-        </section>
-
-        <section class="services_bottom">
-          <div class="cards_container">
-            <div class="card seo_card">
-              <div class="card_left">
-                <div>
-                  <h4>search engine</h4>
-                  <h4>optimization</h4>
-                </div>
-
-                <div>
-                  <img src="/IMAGES/top_right_arrow-green.svg" alt="direction arrow facing top right" />
-                  <span>learn more</span>
-                </div>
-              </div>
-
-              <div class="card_right">
-                <img class="illustration" src="/IMAGES/card_illustration_1.svg" alt="card illustration" />
-              </div>
-            </div>
-
-            <div class="card ppc_card">
-              <div class="card_left">
-                <div>
-                  <h4>pay-per-click</h4>
-                  <h4>advertising</h4>
-                </div>
-
-                <div>
-                  <img src="/IMAGES/top_right_arrow-green.svg" alt="direction arrow facing top right" />
-                  <span>learn more</span>
-                </div>
-              </div>
-
-              <div class="card_right">
-                <img class="illustration" src="/IMAGES/card_illustration_2.svg" alt="card illustration" />
-              </div>
-            </div>
+          <div class="author">
+            <h4>Neha Bansal</h4>
+            <p>Marketing Head at LuxeSpaces</p>
           </div>
+        </div>
 
-          <div class="cards_container">
-            <div class="card sm_card">
-              <div class="card_left">
-                <div>
-                  <h4>social media</h4>
-                  <h4>marketing</h4>
-                </div>
-
-                <div>
-                  <img src="/IMAGES/top_right_arrow.svg" alt="direction arrow facing top right" />
-                  <span>learn more</span>
-                </div>
-              </div>
-
-              <div class="card_right">
-                <img class="illustration" src="/IMAGES/card_illustration_3.svg" alt="card illustration" />
-              </div>
-            </div>
-
-            <div class="card email_card">
-              <div class="card_left">
-                <div>
-                  <h4>email</h4>
-                  <h4>marketing</h4>
-                </div>
-
-                <div>
-                  <img src="/IMAGES/top_right_arrow-green.svg" alt="direction arrow facing top right" />
-                  <span>learn more</span>
-                </div>
-              </div>
-
-              <div class="card_right">
-                <img class="illustration" src="/IMAGES/card_illustration_4.svg" alt="card illustration" />
-              </div>
-            </div>
+        <div class="swiper-slide swiper_card">
+          <p class="text">
+            We were struggling with lead quality until we found this team. Their AI-based targeting brought in real homeowners — not just form fillers. Solid team, killer results.
+          </p>
+          <div class="author">
+            <h4>Arjun Rao</h4>
+            <p>CMO at UrbanNest</p>
           </div>
+        </div>
 
-          <div class="cards_container">
-            <div class="card content_card">
-              <div class="card_left">
-                <div>
-                  <h4>content</h4>
-                  <h4>creation</h4>
-                </div>
-
-                <div>
-                  <img src="/IMAGES/top_right_arrow-green.svg" alt="direction arrow facing top right" />
-                  <span>learn more</span>
-                </div>
-              </div>
-
-              <div class="card_right">
-                <img class="illustration" src="/IMAGES/card_illustration_5.svg" alt="card illustration" />
-              </div>
-            </div>
-
-            <div class="card analytics_card">
-              <div class="card_left">
-                <div>
-                  <h4>analytics and</h4>
-                  <h4>tracking</h4>
-                </div>
-
-                <div>
-                  <img src="/IMAGES/top_right_arrow.svg" alt="direction arrow facing top right" />
-                  <span>learn more</span>
-                </div>
-              </div>
-
-              <div class="card_right">
-                <img class="illustration" src="/IMAGES/card_illustration_6.svg" alt="card illustration" />
-              </div>
-            </div>
+        <div class="swiper-slide swiper_card">
+          <p class="text">
+            What stood out was their clarity and process. From onboarding to launch, everything was handled smoothly. We've doubled our monthly revenue thanks to their work.
+          </p>
+          <div class="author">
+            <h4>Sara Desai</h4>
+            <p>Director at HomeWell Designs</p>
           </div>
-        </section>
-      </section>
+        </div>
+
+        <div class="swiper-slide swiper_card">
+          <p class="text">
+            Working with them has been a total game changer. Their marketing system doesn't just get leads — it gets us booked appointments. We're scaling faster than ever.
+          </p>
+          <div class="author">
+            <h4>Manish Kapoor</h4>
+            <p>Owner at VisionCraft Studios</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="services" id="services">
+  <section class="services_top">
+    <h3>Services</h3>
+
+    <p>
+      We help interior designers, architects, attract high-value clients with AI-driven marketing strategies.
+      Our key services include:
+    </p>
+  </section>
+
+
+  <section class="services_bottom">
+    <div class="cards_container">
+      <div class="card seo_card">
+        <div class="card_left">
+          <div>
+            <h4>AI-Powered</h4>
+            <h4>Lead Generation</h4>
+          </div>
+        </div>
+
+        <div class="card_right">
+          <img class="illustration" src="/IMAGES/card_illustration_1.svg" alt="AI lead gen illustration" />
+        </div>
+      </div>
+
+      <div class="card ppc_card">
+        <div class="card_left">
+          <div>
+            <h4>Targeted</h4>
+            <h4>Advertising</h4>
+          </div>
+        </div>
+
+        <div class="card_right">
+          <img class="illustration" src="/IMAGES/card_illustration_2.svg" alt="targeted ads illustration" />
+        </div>
+      </div>
+    </div>
+
+    <div class="cards_container">
+      <div class="card email_card">
+        <div class="card_left">
+          <div>
+            <h4>Personalized</h4>
+            <h4>Marketing Strategy</h4>
+          </div>
+        </div>
+
+        <div class="card_right">
+          <img class="illustration" src="/IMAGES/card_illustration_4.svg" alt="strategy illustration" />
+        </div>
+      </div>
+
+      <div class="card analytics_card">
+        <div class="card_left">
+          <div>
+            <h4>Performance</h4>
+            <h4>Tracking & Analytics</h4>
+          </div>
+        </div>
+
+        <div class="card_right">
+          <img class="illustration" src="/IMAGES/card_illustration_6.svg" alt="analytics illustration" />
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
 
       <section class="c_t_a">
         <div class="bg_color"></div>
@@ -207,471 +509,454 @@
             Contact us today to learn more about how our digital marketing services can help your business grow and
             succeed online.
           </p>
-          <button class="c_t_a-btn">Get your free proposal</button>
+          <button class="c_t_a-btn">Book a Call</button>
         </div>
 
         <div class="c_t_a-right">
           <img src="IMAGES/c-t-a-illustration.svg" alt="call to action illustration" />
         </div>
       </section>
-
-      <section class="case_studies" id="case-studies">
-        <div class="case_studies_top">
-          <h3>case studies</h3>
-          <p>Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
-        </div>
-
-        <div class="case_studies_bottom">
-          <div class="case-studies_bottom-card_container">
-            <div class="case_studies_bottom-card">
-              <p>
-                For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in
-                website traffic and a 25% increase in sales.
-              </p>
-
-              <div>
-                <span>learn more</span>
-                <img src="/IMAGES/top_right_arrow-green.svg" alt="direction arrow facing top right" />
-              </div>
-            </div>
-          </div>
-
-          <div class="case-studies_bottom-card_container">
-            <div class="case_studies_bottom-card">
-              <p>
-                For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key
-                keywords and a 200% increase in organic traffic.
-              </p>
-
-              <div>
-                <span>learn more</span>
-                <img src="/IMAGES/top_right_arrow-green.svg" alt="direction arrow facing top right" />
-              </div>
-            </div>
-          </div>
-
-          <div class="case-studies_bottom-card_container">
-            <div class="case_studies_bottom-card">
-              <p>
-                For a national retail chain, we created a social media marketing campaign that increased followers by
-                25% and generated a 20% increase in online sales.
-              </p>
-
-              <div>
-                <span>learn more</span>
-                <img src="/IMAGES/top_right_arrow-green.svg" alt="direction arrow facing top right" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       <section class="work_process" id="work-process">
-        <div class="work_process_top">
-          <h3>Our Working Process</h3>
-          <p>Step-by-Step Guide to Achieving Your Business Goals</p>
-        </div>
+       <div class="work_process_top">
+        <h3>Our 4 Stage Process</h3>
+        <p>Step-by-Step Guide to Achieving Your Business Goals</p>
+      </div>
 
-        <div class="work_process_bottom">
-          <div class="work_process_bottom_box">
-            <div class="box-top">
-              <h3>Consultation</h3>
-              <span>
-                <div class="box-top_bar"></div>
-                <div class="box-top_bar"></div>
-              </span>
-            </div>
+      <section class="process-section">
 
-            <p class="box-bottom">
-              During the initial consultation, we will discuss your business goals and objectives, target audience, and
-              current marketing efforts. This will allow us to understand your needs and tailor our services to best fit
-              your requirements.
-            </p>
-          </div>
+  <div class="process-steps">
+    <div class="process-card">
+      <div class="process-number">01</div>
+      <h3 class="process-heading">Book the Call</h3>
+      <p class="process-text">Book a free consultation call with our Founder.</p>
+    </div>
 
-          <div class="work_process_bottom_box">
-            <div class="box-top">
-              <h3>Research and Strategy Development</h3>
-              <span>
-                <div class="box-top_bar"></div>
-                <div class="box-top_bar"></div>
-              </span>
-            </div>
+    <div class="process-card">
+      <div class="process-number">02</div>
+      <h3 class="process-heading">Join AI Growth Partner Program</h3>
+      <p class="process-text">We deep dive into your goals, audience, and market. Research and analysis is done to identify key opportunities and challenges — building a solid foundation.</p>
+    </div>
 
-            <p class="box-bottom">
-              During this phase, we conduct in-depth research on your industry, competitors, and target audience. We
-              will develop a customized strategy that aligns with your business goals and objectives to ensure a
-              comprehensive approach to achieving success.
-            </p>
-          </div>
+    <div class="process-card">
+      <div class="process-number">03</div>
+      <h3 class="process-heading">Optimisation and Implementation of SOPs</h3>
+      <p class="process-text">We optimise your client acquisition and implement systems (SOPs) that help you attract high-quality clients while keeping your backend strong and efficient.</p>
+    </div>
 
-          <div class="work_process_bottom_box">
-            <div class="box-top">
-              <h3>Implementation</h3>
-              <span>
-                <div class="box-top_bar"></div>
-                <div class="box-top_bar"></div>
-              </span>
-            </div>
+    <div class="process-card">
+      <div class="process-number">04</div>
+      <h3 class="process-heading">Unlock Growth</h3>
+      <p class="process-text">We launch your acquisition system with paid infrastructure to help you scale fast. This is where things get real — high pace, consistent growth, no wasted time.</p>
+    </div>
+  </div>
+</section>
 
-            <p class="box-bottom">
-              After the strategy is defined, we will move to the implementation phase, where we put the plan into
-              action. This includes executing marketing campaigns, developing content, and utilizing the necessary tools
-              and platforms to drive results for your business.
-            </p>
-          </div>
+<style>
+  :root {
+    --lime-green: #a6e22e;
+    --black: #222;
+    --card-bg-grey: #f5f5f5;
+  }
 
-          <div class="work_process_bottom_box">
-            <div class="box-top">
-              <h3>Monitoring and Optimization</h3>
-              <span>
-                <div class="box-top_bar"></div>
-                <div class="box-top_bar"></div>
-              </span>
-            </div>
+  .process-section {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--black);
+  }
 
-            <p class="box-bottom">
-              Once the implementation is underway, we will continuously monitor the performance of all campaigns and
-              initiatives. We analyze data and metrics to ensure everything is performing as expected, making necessary
-              adjustments to optimize results and maximize effectiveness.
-            </p>
-          </div>
+  .process-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
 
-          <div class="work_process_bottom_box">
-            <div class="box-top">
-              <h3>Reporting and Communication</h3>
-              <span>
-                <div class="box-top_bar"></div>
-                <div class="box-top_bar"></div>
-              </span>
-            </div>
+  .process-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
 
-            <p class="box-bottom">
-              We believe in transparency, which is why we provide regular reports to keep you informed of our progress.
-              During this phase, we communicate our findings, successes, and areas for improvement, ensuring you're
-              always aware of how your business is growing.
-            </p>
-          </div>
+  .process-card {
+    background-color: var(--card-bg-grey);
+    border: 1px solid var(--black);
+    border-radius: 45px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 5px 0 0 var(--black);
+    transition: background-color 0.3s ease;
+  }
 
-          <div class="work_process_bottom_box">
-            <div class="box-top">
-              <h3>Continual Improvement</h3>
-              <span>
-                <div class="box-top_bar"></div>
-                <div class="box-top_bar"></div>
-              </span>
-            </div>
+  .process-card:hover {
+    background-color: var(--lime-green);
+  }
 
-            <p class="box-bottom">
-              Our work doesn’t stop at implementation and reporting. We are committed to continually improving our
-              processes and strategies to keep pace with changes in the market and ensure long-term success for your
-              business. We will adjust and refine our approach based on insights and new opportunities.
-            </p>
-          </div>
-        </div>
-      </section>
+  .process-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--black);
+  }
 
-      <section class="team_members">
-        <div class="team_members_top">
-          <h3>Team</h3>
-          <p>Meet the skilled and experienced team behind our successful digital marketing strategies</p>
-        </div>
+  .process-heading {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
 
-        <div class="team_members_bottom">
-          <div class="team_members_profile-container">
-            <div class="profile_container_1" id="profileContainer">
-              <div class="profile_card">
-                <div class="profile_card_top">
-                  <div class="profile_card_top_img">
-                    <img src="/IMAGES/mask.svg" alt="image mask" class="mask" />
-                    <img src="/IMAGES/john_smith.webp" alt="john smith's picture" />
-                  </div>
+  .process-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
 
-                  <span>
-                    <h4>John Smith</h4>
-                    <p class="title">CEO and Founder</p>
-                  </span>
+  @media (max-width: 768px) {
+    .process-steps {
+      grid-template-columns: 1fr;
+    }
 
-                  <div class="profile_card_top_icon">
-                    <img src="/IMAGES/linkedin_icon.svg" alt="linkedin icon" />
-                  </div>
-                </div>
+    .process-card {
+      border-radius: 25px;
+      padding: 2rem 1.5rem;
+    }
 
-                <div class="profile_card_bottom">
-                  <p>10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy</p>
-                </div>
-              </div>
+    .process-heading {
+      font-size: 1.4rem;
+    }
 
-              <div class="profile_card">
-                <div class="profile_card_top">
-                  <div class="profile_card_top_img">
-                    <img src="/IMAGES/mask.svg" alt="image mask" class="mask" />
-                    <img src="/IMAGES/jane_doe.webp" alt="jane doe's picture" />
-                  </div>
+    .process-text {
+      font-size: 1rem;
+    }
+  }
+</style>
 
-                  <span>
-                    <h4>Jane Doe</h4>
-                    <p class="title">Director of Operations</p>
-                  </span>
+</section>
+  
+<section class="faq-section">
+  <h2 class="faq-title">Got Questions? We've Got Answers!</h2>
+  
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      How will Myvez generate leads for me?
+      <span class="arrow"></span>
+    </button>
+    <div class="faq-answer" hidden>
+      At Myvez, we specialize in helping solar companies grow their businesses with high-quality, pre-set appointments. Backed by years of experience in sales, marketing, and the solar industry, we use cutting-edge strategies to deliver results that matter. Our approach shifts you away from outdated door-to-door marketing methods and connects you with the digital era of pre-qualified leads and appointments. Having partnered with over 50+ companies across 25+ countries, Myvez has successfully generated more than 1 million leads in 200+ residential and commercial solar markets. We go beyond traditional lead generation by providing custom solutions tailored to your business. Our data-driven systems are designed to deliver fast, reliable appointments, boosting your sales and revenue.
+    </div>
+  </div>
 
-                  <div class="profile_card_top_icon">
-                    <img src="/IMAGES/linkedin_icon.svg" alt="linkedin icon" />
-                  </div>
-                </div>
+  <!-- Repeat similar structure for other FAQs -->
 
-                <div class="profile_card_bottom">
-                  <p>
-                    7+ years of experience in project management and team leadership. Strong organizational and
-                    communication skills
-                  </p>
-                </div>
-              </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      How do Myvez leads compare to others?
+      <span class="arrow"></span>
+    </button>
+    <div class="faq-answer" hidden>
+      Stop wasting time and money on recycled leads that force you to compete with other businesses. Our leads are exclusively yours, ensuring you don’t have to battle over pricing or risk losing deals to competitors.Unlike other companies that resell leads within the same market, we guarantee that every lead we provide is unique and tailored specifically to your business.
+    </div>
+  </div>
 
-              <div class="profile_card">
-                <div class="profile_card_top">
-                  <div class="profile_card_top_img">
-                    <img src="/IMAGES/mask.svg" alt="image mask" class="mask" />
-                    <img src="/IMAGES/michael_brown.webp" alt="michael brown's picture" />
-                  </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      What is the turnaround time for launching the ads?
+      <span class="arrow"></span>
+    </button>
+    <div class="faq-answer" hidden>
+      We usually take 1 week to launch your ads, you have the option to choose from different creatives that we have available, after the approval the ads are launched within 1 week.
+    </div>
+  </div>
 
-                  <span>
-                    <h4>Michael Brown</h4>
-                    <p class="title">Senior SEO Specialist</p>
-                  </span>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      Does Myvez book appointments?
+      <span class="arrow"></span>
+    </button>
+    <div class="faq-answer" hidden>
+      We offer comprehensive reporting and analytics, providing actionable insights into campaign performance across Meta platform.
+    </div>
+  </div>
 
-                  <div class="profile_card_top_icon">
-                    <img src="/IMAGES/linkedin_icon.svg" alt="linkedin icon" />
-                  </div>
-                </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      Exclusive Leads vs Non-exclusive leads, which is better?
+      <span class="arrow"></span>
+    </button>
+    <div class="faq-answer" hidden>
+      Yes, we provide continuous ad optimization and management to stay ahead of evolving trends and algorithms, ensuring sustained campaign success on Meta platform.
+    </div>
+  </div>
 
-                <div class="profile_card_bottom">
-                  <p>
-                    5+ years of experience in SEO and content creation. Proficient in keyword research and on-page
-                    optimization
-                  </p>
-                </div>
-              </div>
-            </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      How do you disqualify not-qualified leads?
+      <span class="arrow"></span>
+    </button>
+    <div class="faq-answer" hidden>
+      We disqualify unqualified leads through a rigorous screening process. This includes verifying customer using combination of AI tools and human agents, we conduct detailed follow-ups and pre-qualification checks to ensure that only high-quality leads move forward. This process saves time and resources, allowing you to focus on prospects most likely to convert.
+    </div>
+  </div>
 
-            <div class="profile_container_2" id="profileContainer">
-              <div class="profile_card">
-                <div class="profile_card_top">
-                  <div class="profile_card_top_img">
-                    <img loading="lazy" src="/IMAGES/mask.svg" alt="image mask" class="mask" />
-                    <img loading="lazy" src="/IMAGES/emily_johnson.webp" alt="emily johnson's picture" />
-                  </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      What’s your conversion rate?
+      <span class="arrow"></span>
+    </button>
+    <div class="faq-answer" hidden>
+      The conversion rate from leads to appointments typically ranges between 20% and 35%, depending on factors such as the specific market dynamics and unique circumstances of your target audience. Variations can occur due to regional differences, customer demographics, competition, and the effectiveness of follow-up efforts. This range reflects our commitment to delivering high-quality leads that align with your business goals and market conditions.
+    </div>
+  </div>
 
-                  <span>
-                    <h4>Emily Johnson</h4>
-                    <p class="title">PPC Manager</p>
-                  </span>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">
+      What is your "you don't pay" guarantee?
+      <span class="arrow"></span>
+    </button>
+    <div class="faq-answer" hidden>
+      If we don't produce the said results, we will refund the entire amount except the AI Tools costs and Meta Ads spent.
+    </div>
+  </div>
+</section>
 
-                  <div class="profile_card_top_icon">
-                    <img loading="lazy" src="/IMAGES/linkedin_icon.svg" alt="linkedin icon" />
-                  </div>
-                </div>
+<style>
+  :root {
+    --lime-green: #a6e22e;
+    --card-bg-grey: #f5f5f5;
+    --black: #222;
+  }
+  
+  .faq-section {
+    max-width: 1320px;
+    margin: 2rem auto;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--black);
+    padding: 0 1rem;
+  }
 
-                <div class="profile_card_bottom">
-                  <p>
-                    3+ years of experience in paid search advertising. Skilled in campaign management and performance
-                    analysis
-                  </p>
-                </div>
-              </div>
+  .faq-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    margin-top: 80px;
+  }
 
-              <div class="profile_card">
-                <div class="profile_card_top">
-                  <div class="profile_card_top_img">
-                    <img loading="lazy" src="/IMAGES/mask.svg" alt="image mask" class="mask" />
-                    <img loading="lazy" src="/IMAGES/brian_williams.webp" alt="brian williams's picture" />
-                  </div>
+  .faq-item {
+    background-color: var(--card-bg-grey);
+    border: 1px solid var(--black);
+    border-radius: 25px;
+    box-shadow: 0 5px 0 0 var(--black);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+  }
 
-                  <span>
-                    <h4>Brian Williams</h4>
-                    <p class="title">Social Media Specialist</p>
-                  </span>
+  .faq-item:hover {
+    background-color: var(--lime-green);
+  }
 
-                  <div class="profile_card_top_icon">
-                    <img loading="lazy" src="/IMAGES/linkedin_icon.svg" alt="linkedin icon" />
-                  </div>
-                </div>
+  .faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 2rem 3rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black);
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Space Grotesk", sans-serif;
+  }
 
-                <div class="profile_card_bottom">
-                  <p>
-                    4+ years of experience in social media marketing. Proficient in creating and scheduling content,
-                    analyzing metrics, and building engagement
-                  </p>
-                </div>
-              </div>
+  .faq-item:hover .faq-question {
+    color: #000;
+  }
 
-              <div class="profile_card">
-                <div class="profile_card_top">
-                  <div class="profile_card_top_img">
-                    <img loading="lazy" src="/IMAGES/mask.svg" alt="image mask" class="mask" />
-                    <img loading="lazy" src="/IMAGES/sarah_kim.webp" alt="sarah kim's picture" />
-                  </div>
+  .arrow {
+    border: solid var(--black);
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 6px;
+    margin-left: 1rem;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
 
-                  <span>
-                    <h4>Sarah Kim</h4>
-                    <p class="title">Content Creator</p>
-                  </span>
+  .faq-question[aria-expanded="true"] .arrow {
+    transform: rotate(-135deg);
+  }
 
-                  <div class="profile_card_top_icon">
-                    <img loading="lazy" src="/IMAGES/linkedin_icon.svg" alt="linkedin icon" />
-                  </div>
-                </div>
+  .faq-answer {
+    padding: 2rem 3rem 2rem 3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--black);
+    background-color: #fff;
+    border-radius: 0 0 45px 45px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    font-family: "Space Grotesk", sans-serif;
+  }
 
-                <div class="profile_card_bottom">
-                  <p>
-                    2+ years of experience in writing and editing Skilled in creating compelling, SEO-optimized content
-                    for various industries
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  .faq-answer[hidden] {
+    display: none;
+  }
 
-      <section class="testimonials" id="testimonials">
-        <div class="testimonials_top">
-          <h3>Testimonials</h3>
-          <p>
-            Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services
-          </p>
-        </div>
+  .faq-question[aria-expanded="true"] + .faq-answer {
+    opacity: 1;
+    max-height: 1000px; /* big enough for content */
+    display: block;
+  }
 
-        <div class="testimonials_bottom">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide swiper_card">
-                <p class="text">
-                  We have been working with Positivus for the past year and have seen a significant increase in website
-                  traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares
-                  about the success of our business. We highly recommend Positivus to any company looking to grow their
-                  online presence.
-                </p>
+  @media (max-width: 720px) {
+    .faq-item {
+      border-radius: 25px;
+      padding: 0;
+      box-shadow: 0 3px 0 0 var(--black);
+    }
+    .faq-question {
+      padding: 1.5rem 2rem;
+      font-size: 1.2rem;
+    }
+    .faq-answer {
+      padding: 1rem 2rem 1.5rem 2rem;
+      font-size: 1rem;
+      border-radius: 0 0 25px 25px;
+    }
+  }
+</style>
 
-                <div class="author">
-                  <h4>John Smith</h4>
-                  <p>Marketing Director at XYZ Corp</p>
-                </div>
-              </div>
+<script>
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !isExpanded);
+      const answer = btn.nextElementSibling;
+      if (!isExpanded) {
+        answer.removeAttribute('hidden');
+      } else {
+        answer.setAttribute('hidden', '');
+      }
+    });
+  });
+</script>
 
-              <div class="swiper-slide swiper_card">
-                <p class="text">
-                  Working with Positivus has been a game-changer for our online presence. Their expertise and dedication
-                  have helped us increase both our brand visibility and customer engagement. Their team consistently
-                  delivers high-quality results, and we've seen substantial growth in leads.
-                </p>
+<section class="talk-section">
+  <div class="talk-text">Let's Talk</div>
+  <button class="talk-button">Book a Call</button>
+</section>
 
-                <div class="author">
-                  <h4>Emily Rodriguez</h4>
-                  <p>Chief Marketing Officer at TechSolutions Inc.</p>
-                </div>
-              </div>
+<style>
+  .talk-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem;
+    max-width: auto;
+    margin: auto;
+    margin-top: 125px;
+    background: linear-gradient(135deg, #2196F3 0%, #4CAF50 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(33, 150, 243, 0.3);
+    overflow: hidden;
+  }
 
-              <div class="swiper-slide swiper_card">
-                <p class="text">
-                  Since partnering with Positivus, we’ve experienced a significant boost in web traffic and customer
-                  inquiries. Their team is incredibly responsive and knowledgeable, making them a valuable extension of
-                  our marketing department. We highly recommend them to any business looking to expand its digital
-                  footprint.
-                </p>
+  .talk-text {
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 1s ease forwards;
+    font-family: "Space Grotesk", sans-serif;
 
-                <div class="author">
-                  <h4>David Carter</h4>
-                  <p>VP of Business Development at Innovate Corp.</p>
-                </div>
-              </div>
+  }
 
-              <div class="swiper-slide swiper_card">
-                <p class="text">
-                  The team at Positivus helped us streamline our digital strategy, leading to a marked improvement in
-                  both traffic and conversion rates. Their dedication and professional approach have made a real
-                  difference in our company’s growth.
-                </p>
+  .talk-button {
+    background-color: white;
+    color: #2196F3;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInRight 1s ease forwards;
+    animation-delay: 0.5s;
+    transition: background-color 0.3s, color 0.3s;
+  }
 
-                <div class="author">
-                  <h4>Sophia Lee</h4>
-                  <p>CEO at GlobalTrade Networks</p>
-                </div>
-              </div>
+  .talk-button:hover {
+    background-color: #1976D2;
+    color: white;
+    box-shadow: 0 8px 25px rgba(25, 118, 210, 0.6);
+  }
 
-              <div class="swiper-slide swiper_card">
-                <p class="text">
-                  Positivus has played a crucial role in our online success. Their data-driven approach and clear
-                  communication helped us achieve new levels of engagement with our customers. We’ve seen impressive
-                  returns from their marketing efforts and couldn’t be more pleased with the results.
-                </p>
+  /* Animations */
+  @keyframes slideInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
-                <div class="author">
-                  <h4>Michael Thompson</h4>
-                  <p>Managing Director at BrightFuture Enterprises</p>
-                </div>
-              </div>
-            </div>
+  @keyframes slideInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
-            <div class="swiper-pagination"></div>
+  /* Responsive */
+  @media (max-width: 600px) {
+    .talk-section {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+    }
+    .talk-text {
+      font-size: 3rem;
+      transform: translateY(-20px);
+      animation: slideInDown 1s ease forwards;
+    }
+    .talk-button {
+      transform: translateY(20px);
+      animation: slideInUp 1s ease forwards;
+      animation-delay: 0.5s;
+      width: 100%;
+      max-width: 300px;
+      font-size: 1.1rem;
+    }
+  }
 
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-        </div>
-      </section>
+  @keyframes slideInDown {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
 
-      <section class="contact_us">
-        <div class="contact_us_top">
-          <h3>Contact Us</h3>
-          <p>Connect with Us: Let's Discuss Your Digital Marketing Needs</p>
-        </div>
 
-        <section class="contact_us_bottom" id="contact-us">
-          <div class="form_wrapper">
-            <form class="contact_us_form" id="contact">
-              <div class="checklist">
-                <label for="sayHi">
-                  <input type="radio" name="options" id="sayHi" value="Say Hi" />
-                  <span class="custom_radio"></span>
-                  Say Hi
-                </label>
 
-                <label for="getQuote">
-                  <input type="radio" name="options" id="getQuote" value="Get a Quote" checked aria-checked="true" />
-                  <span class="custom_radio"></span>
-                  Get a Quote
-                </label>
-              </div>
-
-              <div class="form_inputs">
-                <div class="input_wrapper">
-                  <label for="name">Name*</label>
-                  <input type="text" name="name" id="name" placeholder="Name" />
-                  <p class="error_message" id="nameError"></p>
-                </div>
-
-                <div class="input_wrapper">
-                  <label for="email">Email*</label>
-                  <input type="email" name="email" id="email" placeholder="Email" />
-                  <p class="error_message" id="emailError"></p>
-                </div>
-
-                <div class="input_wrapper">
-                  <label for="message">Message*</label>
-                  <textarea name="message" id="message" placeholder="Message" maxlength="500"></textarea>
-                  <p class="error_message" id="msgError"></p>
-                </div>
-
-                <button type="submit">Send Message</button>
-              </div>
-            </form>
-          </div>
-
-          <div class="image_wrapper">
-            <img src="/IMAGES/Illustration_2.svg" alt="contact form illustration" />
-          </div>
-        </section>
-      </section>
     </main>
 
     <footer>
@@ -683,65 +968,21 @@
         <nav class="footer_nav_list_container">
           <ul class="footer_nav_list">
             <li class="footer_nav_list-list_item">
-              <a href="#work-process">about us</a>
+              <a href="#work-process">Work Process</a>
             </li>
             <li class="footer_nav_list-list_item">
               <a href="#services">services</a>
             </li>
             <li class="footer_nav_list-list_item">
-              <a href="#case-studies">use cases</a>
-            </li>
-            <li class="footer_nav_list-list_item">
-              <a href="#contact-us">pricing</a>
-            </li>
-            <li class="footer_nav_list-list_item">
-              <a href="#testimonials">blog</a>
+              <a href="#testimonials">Testimonials</a>
             </li>
           </ul>
         </nav>
-
-        <div class="footer_social_icons">
-          <img src="/IMAGES/linkedin_logo.svg" alt="LinkedIn icon" loading="lazy" />
-
-          <img src="/IMAGES/facebook_logo.svg" alt="Facebook icon" loading="lazy" />
-
-          <img src="/IMAGES/twitter_logo.svg" alt="X (formerly known as Twitter) icon" loading="lazy" />
-        </div>
-      </div>
-
-      <div class="footer_middle">
-        <div class="footer_address">
-          <div>
-            <h3>Contact us:</h3>
-          </div>
-
-          <div class="address_wrapper">
-            <span class="email_address">Email: <a href="mailto:info@positivus.com">info@positivus.com</a></span>
-            <span class="phone_num">Phone: <a href="tel:+1-555-567-8901">555-567-8901</a></span>
-            <span class="location">
-              <span>Address: 1234 Main St</span>
-              <span>Moonstone City, Stardust State 12345</span>
-            </span>
-          </div>
-        </div>
-
-        <div class="newsletter_sub">
-          <div class="newsletter_form_wrapper" id="newsletter_form_wrapper">
-            <form id="newsletter">
-              <div class="newsletter_email_input_wrapper" id="newsletter_email_input_wrapper">
-                <input type="email" placeholder="Email" name="email" id="newsletter_email" />
-                <p class="error_message" id="newsletter_error"></p>
-              </div>
-              <input type="submit" value="Subscribe to news" />
-            </form>
-          </div>
-        </div>
       </div>
 
       <div class="footer_bottom">
         <div class="copyright">
-          <p>© <span id="year"></span> Positivus. All Rights Reserved.</p>
-          <span class="privacy_policy">Privacy Policy</span>
+          <p>© <span id="year"></span> Myvez. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
