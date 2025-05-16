@@ -6,7 +6,6 @@
     <link rel="shortcut icon" href="/IMAGES/Positivus_Favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/CSS/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Myvez - Get 8–10 high-value clients in the next 60 days — our AI-powered system attracts, filters, and delivers serious homeowners looking for interior or architecture help</title>
   </head>
   <body>
@@ -28,8 +27,14 @@
           <li class="list_item">
             <a href="#testimonials">Testimonials</a>
           </li>
-          <li class="list_btn">Book a Call</li>
-        </ul>
+          <li class="list_btn" id="book-call-li">Book a Call</li>
+</ul>
+
+<script>
+  document.getElementById('book-call-li').addEventListener('click', function() {
+    window.open('https://calendly.com/myveztech/30min', '_blank');
+  });
+</script>
         <div class="hamburger_menu" id="hamburger_menu">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -42,8 +47,15 @@
 <section class="custom-hero-section">
   <h3 id="typed-container"></h3>
   <p class="custom-subtext">Use AI Before Your Competitors Do!</p>
-  <button class="custom-hero-button">Book a Call</button>
+  <button class="custom-hero-button" id="book-call-btn">Book a Call</button>
 </section>
+
+<script>
+  document.getElementById('book-call-btn').addEventListener('click', function() {
+    window.open('https://calendly.com/myveztech/30min', '_blank');
+  });
+</script>
+
 
 <style>
   .custom-hero-section {
@@ -614,6 +626,12 @@
             succeed online.
           </p>
           <button class="c_t_a-btn">Book a Call</button>
+
+<script>
+  document.querySelector('.c_t_a-btn').addEventListener('click', function() {
+    window.open('https://calendly.com/myveztech/30min', '_blank');
+  });
+</script>
         </div>
 
         <div class="c_t_a-right">
@@ -956,6 +974,13 @@
   <div class="talk-text">Let's Talk</div>
   <button class="talk-button">Book a Call</button>
 </section>
+
+<script>
+  document.querySelector('.talk-button').addEventListener('click', function() {
+    window.open('https://calendly.com/myveztech/30min', '_blank');
+  });
+</script>
+
 
 <style>
   .talk-section {
