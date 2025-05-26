@@ -2279,3 +2279,69 @@ footer .footer_bottom {
 .list_btn:hover a {
   color: #ffffff;
 }
+
+
+.case-study-video {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f2f2f2;
+  border-radius: 1rem;
+  margin-top: 3rem;
+}
+
+.case-study-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.case-study-subtext {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.video-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.urgency-timer {
+  background-color: #fff8e1;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid #ffc107;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.urgency-timer h3 {
+  color: #d32f2f;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.urgency-timer p {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+#countdown {
+  font-weight: bold;
+  color: #d32f2f;
+}
+

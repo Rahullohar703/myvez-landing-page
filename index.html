@@ -54,12 +54,12 @@ src="https://www.facebook.com/tr?id=2904959579669598&ev=PageView&noscript=1"
           <li class="list_item">
             <a href="#testimonials">Testimonials</a>
           </li>
-          <li class="list_btn" id="book-call-li">Book a Call</li>
+          <li class="list_btn" id="book-call-li">Get In Touch</li>
 </ul>
 
 <script>
   document.getElementById('book-call-li').addEventListener('click', function() {
-    window.open('https://calendly.com/myveztech/30min', '_blank');
+    window.open('https://wa.me/917498942701?text=Hi%20I%20just%20saw%20your%20website(myvez.shop)%20and%20I%27m%20interested%20in%20getting%20clients.', '_blank');
   });
 </script>
         <div class="hamburger_menu" id="hamburger_menu">
@@ -73,16 +73,16 @@ src="https://www.facebook.com/tr?id=2904959579669598&ev=PageView&noscript=1"
     <main>
 <section class="custom-hero-section">
   <h3 id="typed-container"></h3>
-  <p class="custom-subtext">Use AI Before Your Competitors Do!</p>
-  <button class="custom-hero-button" id="book-call-btn">Book a Call</button>
+  <p class="custom-subtext">Use AI <strong>before your competitors do</strong> — dominate your market now!</p>
+  <button class="custom-hero-button shake-tilt" id="book-call-btn">Claim Your Spot Now</button>
+  <p class="scarcity-text">🔥 Limited spots available — don’t miss out!</p>
 </section>
 
 <script>
   document.getElementById('book-call-btn').addEventListener('click', function() {
-    window.open('https://calendly.com/myveztech/30min', '_blank');
+    window.open('https://wa.me/917498942701?text=Hi%20I%20just%20saw%20your%20website(myvez.shop)%20and%20I%27m%20interested%20in%20getting%20clients.', '_blank');
   });
 </script>
-
 
 <style>
   .custom-hero-section {
@@ -91,56 +91,68 @@ src="https://www.facebook.com/tr?id=2904959579669598&ev=PageView&noscript=1"
     margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* centers content horizontally */
+    align-items: center;
     text-align: center;
   }
   h3 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    line-height: 1.3;
-    color: #222;
-    min-height: 4.5rem; /* keeps space during typing */
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #111;
+    min-height: 5rem;
+    margin-bottom: 0.5rem;
   }
   .custom-subtext {
-    font-weight: 700;
-    color: #2196F3;
-    margin: 1rem 0 2rem 0;
+    font-weight: 600;
+    color: #0d47a1;
+    margin: 0 0 2rem 0;
+    font-size: 1.25rem;
   }
   .custom-hero-button {
-    background-color: #000;
+    background: linear-gradient(90deg, #0066ff, #0044cc);
     color: white;
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    border: 1px solid #ffffff;
+    padding: 1.2rem 2.5rem;
+    border-radius: 30px;
+    border: none;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    font-size: 1.15rem;
+    font-weight: 700;
+    box-shadow: 0 6px 12px rgba(0, 102, 255, 0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    width: 100%;          /* full width */
+    max-width: 320px;     /* max width for mobile */
   }
   .custom-hero-button:hover {
-    background-color: #ffffff;
-    color: #000;
-    border: 3px solid #000;
-    border-radius: 25px;
+    /* remove hover scale to keep shake consistent */
+    box-shadow: 0 8px 20px rgba(0, 102, 255, 0.8);
+  }
+  .scarcity-text {
+    margin-top: 1rem;
+    color: #e53935;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
   }
   .highlight-blue {
-    color: #2196F3;
-    font-weight: bold;
+    color: #1976d2;
+    font-weight: 700;
   }
   .highlight-green {
-    color: #4caf50;
-    font-weight: bold;
+    color: #388e3c;
+    font-weight: 700;
   }
   .highlight-orange {
-    color: #ff9800;
-    font-weight: bold;
+    color: #f57c00;
+    font-weight: 700;
   }
   @media (max-width: 768px) {
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
     .custom-hero-button {
       width: 100%;
-      max-width: 300px;
+      max-width: 320px;
     }
   }
   /* blinking cursor */
@@ -154,6 +166,28 @@ src="https://www.facebook.com/tr?id=2904959579669598&ev=PageView&noscript=1"
     0%, 100% { background-color: transparent; }
     50% { background-color: black; }
   }
+
+  /* Shake animation */
+  @keyframes tilt-shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+.shake-tilt {
+  animation: tilt-shake 0.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
 </style>
 
 <script>
@@ -176,7 +210,6 @@ src="https://www.facebook.com/tr?id=2904959579669598&ev=PageView&noscript=1"
     { text: "architecture help.", className: "highlight-blue" },
   ];
 
-
   const container = document.getElementById("typed-container");
   let partIndex = 0;
   let charIndex = 0;
@@ -190,8 +223,7 @@ src="https://www.facebook.com/tr?id=2904959579669598&ev=PageView&noscript=1"
         cursorSpan.textContent = " ";
         container.appendChild(cursorSpan);
       }
-      // Keep cursor blinking forever without pause
-      setTimeout(type, 500);
+      setTimeout(type, 300);
       return;
     }
 
@@ -211,13 +243,15 @@ src="https://www.facebook.com/tr?id=2904959579669598&ev=PageView&noscript=1"
       currentSpan = null;
     }
 
-    setTimeout(type, 35); // typing speed
+    setTimeout(type, 30);
   }
 
   document.addEventListener("DOMContentLoaded", () => {
     type();
   });
 </script>
+
+
 
 
 
@@ -300,6 +334,30 @@ src="https://www.facebook.com/tr?id=2904959579669598&ev=PageView&noscript=1"
     updateCount();
   });
 </script>
+
+<section class="case-study-video" id="case-study">
+  <h2 class="case-study-title">📽️ Real Case Study: From Cold Leads to Clients</h2>
+  <p class="case-study-subtext">
+    Watch how our system helped an architect land 3 high-ticket projects in 30 days — without cold DMs or chasing leads.
+  </p>
+  <div class="video-wrapper">
+    <video controls autoplay muted loop>
+      <source src="/IMAGES/myvez.shop case study for website.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+<section class="urgency-timer">
+  <h3>⚡ Let’s Talk — We’re Active Right Now</h3>
+  <p>We’re chatting with designers like you today. Let’s connect while you’re here:</p>
+  <a href="https://wa.me/917498942701?text=Hi%20I%20just%20saw%20your%20website(myvez.shop)%20and%20I%27m%20interested%20in%20getting%20clients." class="custom-hero-button" target="_blank">
+    💬 Message Us on WhatsApp
+  </a>
+</section>
+
+
+
 
 <section class="why-us-section">
   <h2 class="section-title">Why Businesses Trust Us</h2>
@@ -654,11 +712,11 @@ src="https://www.facebook.com/tr?id=2904959579669598&ev=PageView&noscript=1"
             Contact us today to learn more about how our digital marketing services can help your business grow and
             succeed online.
           </p>
-          <button class="c_t_a-btn">Book a Call</button>
+          <button class="c_t_a-btn">Chat with Us</button>
 
 <script>
   document.querySelector('.c_t_a-btn').addEventListener('click', function() {
-    window.open('https://calendly.com/myveztech/30min', '_blank');
+    window.open('https://wa.me/917498942701?text=Hi%20I%20just%20saw%20your%20website(myvez.shop)%20and%20I%27m%20interested%20in%20getting%20clients.', '_blank');
   });
 </script>
         </div>
@@ -1000,12 +1058,12 @@ At Myvez, we specialize in helping Architecture and Interior Designing companies
 
 <section class="talk-section">
   <div class="talk-text">Let's Talk</div>
-  <button class="talk-button">Book a Call</button>
+  <button class="talk-button">Message on WhatsApp</button>
 </section>
 
 <script>
   document.querySelector('.talk-button').addEventListener('click', function() {
-    window.open('https://calendly.com/myveztech/30min', '_blank');
+    window.open('https://wa.me/917498942701?text=Hi%20I%20just%20saw%20your%20website(myvez.shop)%20and%20I%27m%20interested%20in%20getting%20clients.', '_blank');
   });
 </script>
 
