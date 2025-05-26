@@ -356,6 +356,104 @@ src="https://www.facebook.com/tr?id=2904959579669598&ev=PageView&noscript=1"
   </a>
 </section>
 
+<!-- Trust Section with Video Center + Screenshots + Shaky WhatsApp Button -->
+<section class="case-study-video" id="case-study" style="padding:4rem 2rem; background:#f2f2f2; border-radius:1rem; margin-top:3rem; max-width: 1400px; margin-left: auto; margin-right: auto;">
+
+  <h2 class="case-study-title" style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #222; text-align: center;">
+    🤔 Don’t Trust Us? See The Proof Yourself
+  </h2>
+
+  <p class="case-study-subtext" style="font-size: 1.1rem; margin-bottom: 2rem; color: #555; max-width: 700px; margin-inline: auto; line-height: 1.6; text-align: center;">
+    Here are real screenshots from clients' phones along with a video showing our results live.
+  </p>
+
+  <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap;">
+
+    <!-- Left Screenshots -->
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <a href="/IMAGES/ss1.PNG" target="_blank" rel="noopener" style="display: block; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="/IMAGES/ss1.PNG" alt="Client Screenshot 1" style="width: 320px; height: auto; object-fit: cover; display: block;" />
+      </a>
+      <a href="/IMAGES/ss2.PNG" target="_blank" rel="noopener" style="display: block; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="/IMAGES/ss2.PNG" alt="Client Screenshot 2" style="width: 320px; height: auto; object-fit: cover; display: block;" />
+      </a>
+      <a href="/IMAGES/ss3.PNG" target="_blank" rel="noopener" style="display: block; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="/IMAGES/ss3.PNG" alt="Client Screenshot 3" style="width: 320px; height: auto; object-fit: cover; display: block;" />
+      </a>
+    </div>
+
+    <!-- Center Video with Animated Rainbow Border -->
+    <div class="video-wrapper" style="max-width: 580px; border-radius: 1rem; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); position: relative; padding: 8px; background: linear-gradient(270deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      background-size: 1600% 1600%;
+      animation: rainbow 10s linear infinite;">
+      <div style="border-radius: 0.75rem; overflow: hidden; background:#fff;">
+        <video controls muted preload="metadata" style="width: 100%; height: 720px; object-fit: cover; display: block;">
+          <source src="/IMAGES/lead-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <a href="https://wa.me/917498942701?text=Hi%20I%20just%20saw%20your%20website(myvez.shop)%20and%20I%27m%20interested%20in%20getting%20clients." target="_blank" class="whatsapp-btn" style="display: inline-block; margin: 1rem auto 1.5rem; padding: 0.7rem 1.6rem; background-color: #25D366; color: white; font-weight: 700; font-size: 1.1rem; border-radius: 10px; text-align: center; cursor: pointer; user-select: none; animation: shake 0.6s infinite; box-shadow: 0 5px 12px rgba(37, 211, 102, 0.6); transition: background-color 0.3s ease; text-decoration: none; max-width: 260px;">
+          📞 DM us on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Screenshots -->
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <a href="/IMAGES/ss4.PNG" target="_blank" rel="noopener" style="display: block; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="/IMAGES/ss4.PNG" alt="Client Screenshot 4" style="width: 320px; height: auto; object-fit: cover; display: block;" />
+      </a>
+      <a href="/IMAGES/ss5.PNG" target="_blank" rel="noopener" style="display: block; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="/IMAGES/ss5.PNG" alt="Client Screenshot 5" style="width: 320px; height: auto; object-fit: cover; display: block;" />
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-4px); }
+    40%, 80% { transform: translateX(4px); }
+  }
+  .whatsapp-btn:hover {
+    background-color: #1da851 !important;
+    box-shadow: 0 8px 18px rgba(29, 168, 81, 0.9) !important;
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Responsive for smaller screens */
+  @media (max-width: 900px) {
+    section#case-study > div {
+      flex-direction: column !important;
+      align-items: center;
+    }
+    /* Make screenshots bigger on mobile */
+    section#case-study a img {
+      width: 220px !important;
+      margin-bottom: 1.2rem;
+    }
+    /* Make video height adaptive on mobile */
+    .video-wrapper video {
+      height: auto !important;
+      max-height: 400px;
+    }
+  }
+</style>
+
+
 
 
 
